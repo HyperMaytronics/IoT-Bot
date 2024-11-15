@@ -1,0 +1,25 @@
+[
+    {
+        "keywords": [
+            "wifi issue",
+            "connection failed",
+            "cannot connect to wifi"
+        ],
+        "response": "Ensure your Wi-Fi network is set to 2.4 GHz. Reset the PWS and reconnect through the app. Check the Wi-Fi strength near the PWS."
+    },
+    {
+        "keywords": [
+            "bluetooth issue",
+            "cannot connect to bluetooth",
+            "bluetooth not working"
+        ],
+        "response": "Ensure Bluetooth is enabled on your phone and you are within 3 feet of the PWS. Restart the PWS and retry connecting."
+    },
+    {
+        "keywords": [
+            "robot not responding",
+            "communication issue"
+        ],
+        "response": "Check the blue cable for damage. Restart the robot and ensure all cables are properly connected. Escalate to HQ if the issue persists."
+    }
+]
