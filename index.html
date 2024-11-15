@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maytronics Troubleshooting Chatbot</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .chatbot-container {
+            width: 400px;
+            height: 600px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+        .chatbot-header {
+            background: #0078D7;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .chatbot-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: #f4f4f9;
+        }
+        .chatbot-input {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+        .chatbot-input input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+        .chatbot-input button {
+            padding: 15px 20px;
+            background: #0078D7;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 6px;
+            max-width: 75%;
+            word-wrap: break-word;
+        }
+        .message.user {
+            background: #0078D7;
+            color: white;
+            margin-left: auto;
+        }
+        .message.bot {
+            background: #f1f1f1;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chatbot-header">Maytronics Troubleshooting Bot</div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Type your query here..." onkeydown="if(event.key === 'Enter') handleChat()" />
+            <button onclick="handleChat()">Send</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
